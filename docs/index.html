@@ -19,15 +19,25 @@
 
 <body>
   <div id="app">
-  
+
   </div>
 
   <script>
     window.$docsify = {
       name: "思果企业快速构建",
       repo: "",
-      //subMaxLevel: 1, // 侧边栏目录
       // loadSidebar: true, // 侧边栏
+      homepage: "介绍.md",
+      auto2top: true,
+      loadSidebar: "_sidebar.md",
+      executeScript: true,
+      mergeNavbar: true,
+      maxLevel: 4,
+      subMaxLevel: 2,
+      pagination: {
+        crossChapter: true,
+        crossChapterText: false
+      }
     };
   </script>
   <!-- Docsify v4 -->
