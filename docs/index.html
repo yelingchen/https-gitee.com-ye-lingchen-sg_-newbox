@@ -14,6 +14,35 @@
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-javascript.min.js"></script>
+  <!-- 自定义样式 -->
+  <style>
+    /* 搜索框悬浮样式 */
+    .sidebar .search {
+      position: sticky;
+      top: 0;
+      background: white;
+      z-index: 10;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    /* 搜索结果悬浮样式 */
+    .sidebar .search .results {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 20;
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+    
+    /* 确保侧边栏内容不会被搜索结果挤压 */
+    .sidebar-nav {
+      padding-top: 10px;
+    }
+  </style>
 </head>
 
 <body>
@@ -30,6 +59,8 @@
       mergeNavbar: true,
       maxLevel: 4,
       subMaxLevel: 2,
+      // 使用hash模式以更好支持中文路径
+      routerMode: 'hash',
       pagination: {
         crossChapter: true,
         crossChapterText: false
